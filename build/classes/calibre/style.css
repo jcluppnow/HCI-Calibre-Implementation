@@ -1,0 +1,12 @@
+/* 
+    Created on : 30/04/2020, 4:28:23 PM
+    Author     : Jason Luppnow - 18818835
+*/
+
+#pane{
+    -fx-background-image: url("Resources/MainBackground.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1920 950;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
