@@ -13,36 +13,47 @@
     <stylesheets>
         <URL value="@convertscreen.css" />
     </stylesheets>
+    
     <fx:define>
-            <Image fx:id="ConvertIcon" url="@Resources/ConvertIcons/ConvertIcon.png" />
+        <Image fx:id="ConvertIcon" url="@Resources/ConvertIcons/ConvertIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="MetadataIcon" url="@Resources/ConvertIcons/MetadataIcon.png" />
+        <Image fx:id="MetadataIcon" url="@Resources/ConvertIcons/MetadataIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="LookAndFeelIcon" url="@Resources/ConvertIcons/LookandFeelIcon.png" />
+        <Image fx:id="LookAndFeelIcon" url="@Resources/ConvertIcons/LookandFeelIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="HeuresticProcessingIcon" url="@Resources/ConvertIcons/HeuresticProcessingIcon.png" />
+        <Image fx:id="HeuresticProcessingIcon" url="@Resources/ConvertIcons/HeuresticProcessingIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="PageSetupIcon" url="@Resources/ConvertIcons/PageSetupIcon.png" />
+        <Image fx:id="PageSetupIcon" url="@Resources/ConvertIcons/PageSetupIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="StructureDetectionIcon" url="@Resources/ConvertIcons/StructureDetectionIcon.png" />
+        <Image fx:id="StructureDetectionIcon" url="@Resources/ConvertIcons/StructureDetectionIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="TableofContentsIcon" url="@Resources/ConvertIcons/TableofContentsIcon.png" />
+        <Image fx:id="TableofContentsIcon" url="@Resources/ConvertIcons/TableofContentsIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="SearchandReplaceIcon" url="@Resources/ConvertIcons/SearchandReplaceIcon.png" />
+        <Image fx:id="SearchandReplaceIcon" url="@Resources/ConvertIcons/SearchandReplaceIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="EpubIcon" url="@Resources/ConvertIcons/EpubIcon.png" />
+        <Image fx:id="EpubIcon" url="@Resources/ConvertIcons/EpubIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="DebugIcon" url="@Resources/ConvertIcons/DebugIcon.png" />
+        <Image fx:id="DebugIcon" url="@Resources/ConvertIcons/DebugIcon.png" />
     </fx:define>
+    
     <Label fx:id="SynopsisLabel" layoutX="970.0" layoutY="410" /> 
     <ComboBox fx:id="FinalFormatCB" layoutX="708.0" layoutY="100.0" prefWidth="150.0" promptText="EPUB" />
     <ComboBox fx:id="OriginalFormatCB" layoutX="317.0" layoutY="100.0" prefWidth="150.0" promptText="AZW3" />
@@ -52,11 +63,6 @@
     <TextField layoutX="317.0" layoutY="500.0" prefWidth="400.0" />
     <TextField layoutX="317.0" layoutY="600.0" prefWidth="400.0" />
     <TextField layoutX="317.0" layoutY="700.0" prefWidth="400.0" />
-    <ImageView fitHeight="72.0" fitWidth="66.0" layoutX="759.0" layoutY="654.0" onMouseClicked="#handleConvert" pickOnBounds="true" preserveRatio="true">
-        <image>
-           <Image url="@Resources/ConvertIcons/ConvertIcon.png" />
-        </image>
-    </ImageView>
     <Label layoutX="317.0" layoutY="84.0" text="Input Format:" textFill="WHITE" />
     <Label layoutX="708.0" layoutY="84.0" text="Output Format:" textFill="WHITE" />
     <Label layoutX="317.0" layoutY="184.0" text="Title:" textFill="WHITE" />
@@ -65,46 +71,61 @@
     <Label layoutX="317.0" layoutY="484.0" text="Publisher:" textFill="WHITE" />
     <Label layoutX="317.0" layoutY="584.0" text="Tags:" textFill="WHITE" />
     <Label layoutX="317.0" layoutY="684.0" text="Series:" textFill="WHITE" />
-    <Button layoutX="28.0" layoutY="40.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: AARRGGBB;" text="Metadata">
+    
+    <ImageView fitHeight="72.0" fitWidth="66.0" layoutX="759.0" layoutY="654.0" onMouseClicked="#handleConvert" pickOnBounds="true" preserveRatio="true">
+        <image>
+           <Image url="@Resources/ConvertIcons/ConvertIcon.png" />
+        </image>
+    </ImageView>
+
+    <Button layoutX="28.0" layoutY="40.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: 00000000;" text="Metadata">
         <graphic>
             <ImageView layoutX="10.0" image="$MetadataIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" />
         </graphic>
     </Button>
+    
     <Button layoutX="28.0" layoutY="125.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Look and Feel" >
         <graphic>
             <ImageView image="$LookAndFeelIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
+    
     <Button layoutX="28.0" layoutY="205.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Heuristic \nProcessing" >
         <graphic>
             <ImageView image="$HeuresticProcessingIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
+    
     <Button layoutX="28.0" layoutY="285.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Page Setup" >
         <graphic>
             <ImageView image="$PageSetupIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button> 
+    
     <Button layoutX="28.0" layoutY="365.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Structure Detection" >
         <graphic>
             <ImageView image="$StructureDetectionIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
+    
     <Button layoutX="28.0" layoutY="445.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Table of \nContents" >
         <graphic>
             <ImageView image="$TableofContentsIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
-    </Button>  
+    </Button> 
+     
     <Button layoutX="28.0" layoutY="525.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Search and \nReplace" >
         <graphic>
             <ImageView image="$SearchandReplaceIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
-    </Button> 
+    </Button>
+     
     <Button layoutX="28.0" layoutY="605.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="EPUB Output" >
         <graphic>
             <ImageView image="$EpubIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
-    </Button>  
+    </Button> 
+     
     <Button layoutX="28.0" layoutY="685.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Debug" >
         <graphic>
             <ImageView image="$DebugIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 

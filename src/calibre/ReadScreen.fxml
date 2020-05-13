@@ -13,83 +13,101 @@
     <stylesheets>
         <URL value="@readscreen.css" />
     </stylesheets>
-   <children>
-      <fx:define>
+    
+    <children>
+        
+        <fx:define>
           <Image fx:id="PlusIcon" url="@Resources/ReadIcons/Plus.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="SearchIcon" url="@Resources/ReadIcons/SearchIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="BookmarkIcon" url="@Resources/ReadIcons/BookmarkIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="FullScreenIcon" url="@Resources/ReadIcons/FullScreenIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="ResizeIcon" url="@Resources/ReadIcons/ResizeIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="SettingsIcon" url="@Resources/ReadIcons/SettingsIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="MoreIcon" url="@Resources/ReadIcons/MoreIcon.png" />
-      </fx:define>
-      <fx:define>
-          <Image fx:id="LeftArrowIcon" url="@Resources/ReadIcons/LeftArrow.png" />
-      </fx:define>  
-      <fx:define>
-          <Image fx:id="RightArrowIcon" url="@Resources/ReadIcons/RightArrow.png" />
-      </fx:define>
-      <MenuButton id="Menu-Button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: AARRGGBB;" stylesheets="@readscreen.css">
-        <graphic>
-           <ImageView image="$PlusIcon" fitHeight="25.0" fitWidth="25.0" layoutX="0.0" layoutY="0.0" preserveRatio="true" />
-        </graphic>
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: AARRGGBB;">
-              <graphic>
-                 <ImageView image="$SearchIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" /> 
-              </graphic>
-          </MenuItem>
-          <MenuItem mnemonicParsing="false" onAction="#handleBookmark">
-              <graphic>
-                 <ImageView image="$BookmarkIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
-              </graphic>
-          </MenuItem>
-          <MenuItem mnemonicParsing="false" onAction="#handleFullScreen">
-              <graphic>
-                 <ImageView image="$FullScreenIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
-              </graphic>
-          </MenuItem>
-          <MenuItem mnemonicParsing="false" onAction="#handleResize">
-              <graphic>
-                 <ImageView image="$ResizeIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
-              </graphic>
-          </MenuItem>
-          <MenuItem mnemonicParsing="false" onAction="#handleSettings">
-              <graphic>
-                 <ImageView image="$SettingsIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
-              </graphic>
-          </MenuItem>
-          <MenuItem mnemonicParsing="false" onAction="#handleMore">
-              <graphic>
-                 <ImageView image="$MoreIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
-              </graphic>
-          </MenuItem>
-              
-        </items>
-      </MenuButton>
-      <Button layoutX="600.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: AARRGGBB;" onAction="#handleNextPage">
-        <graphic>
-              <ImageView image="$RightArrowIcon" fitHeight="25.0" fitWidth="25.0" />
-        </graphic>
-      </Button>
-      <Button layoutX="14.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: AARRGGBB;" onAction="#handlePreviousPage" >
-        <graphic>
-              <ImageView image="$LeftArrowIcon" fitHeight="25.0" fitWidth="25.0" style="-fx-border-width: 0;" />
-        </graphic>
-      </Button>
-      <Label fx:id="label" layoutX="57.0" layoutY="49.0" text="Label" />
-      <Label fx:id="pageNumLabel" layoutX="650.0" layoutY="14.0" /> 
-   </children>
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="SearchIcon" url="@Resources/ReadIcons/SearchIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="BookmarkIcon" url="@Resources/ReadIcons/BookmarkIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="FullScreenIcon" url="@Resources/ReadIcons/FullScreenIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="ResizeIcon" url="@Resources/ReadIcons/ResizeIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="SettingsIcon" url="@Resources/ReadIcons/SettingsIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="MoreIcon" url="@Resources/ReadIcons/MoreIcon.png" />
+        </fx:define>
+        
+        <fx:define>
+            <Image fx:id="LeftArrowIcon" url="@Resources/ReadIcons/LeftArrow.png" />
+        </fx:define> 
+         
+        <fx:define>
+            <Image fx:id="RightArrowIcon" url="@Resources/ReadIcons/RightArrow.png" />
+        </fx:define>
+        
+        <MenuButton id="Menu-Button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" stylesheets="@readscreen.css">
+            <graphic>
+                <ImageView image="$PlusIcon" fitHeight="25.0" fitWidth="25.0" layoutX="0.0" layoutY="0.0" preserveRatio="true" />
+            </graphic>
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: 00000000;">
+                    <graphic>
+                        <ImageView image="$SearchIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" /> 
+                    </graphic>
+                </MenuItem>
+
+                <MenuItem mnemonicParsing="false" onAction="#handleBookmark">
+                    <graphic>
+                       <ImageView image="$BookmarkIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>
+
+                <MenuItem mnemonicParsing="false" onAction="#handleFullScreen">
+                    <graphic>
+                       <ImageView image="$FullScreenIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>
+
+                <MenuItem mnemonicParsing="false" onAction="#handleResize">
+                    <graphic>
+                       <ImageView image="$ResizeIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>
+
+                <MenuItem mnemonicParsing="false" onAction="#handleSettings">
+                    <graphic>
+                       <ImageView image="$SettingsIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>
+
+                <MenuItem mnemonicParsing="false" onAction="#handleMore">
+                    <graphic>
+                       <ImageView image="$MoreIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>     
+            </items>
+        </MenuButton>
+      
+        <Button layoutX="600.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" onAction="#handleNextPage">
+            <graphic>
+                <ImageView image="$RightArrowIcon" fitHeight="25.0" fitWidth="25.0" />
+            </graphic>
+        </Button>
+        
+        <Button layoutX="14.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" onAction="#handlePreviousPage" >
+          <graphic>
+                <ImageView image="$LeftArrowIcon" fitHeight="25.0" fitWidth="25.0" style="-fx-border-width: 0;" />
+          </graphic>
+        </Button>
+      
+        <Label fx:id="label" layoutX="57.0" layoutY="49.0" text="Label" />
+        <Label fx:id="pageNumLabel" layoutX="650.0" layoutY="14.0" /> 
+    </children>
 </AnchorPane>
