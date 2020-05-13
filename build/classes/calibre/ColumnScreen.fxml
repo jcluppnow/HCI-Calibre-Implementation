@@ -36,33 +36,61 @@
         
         <Button layoutX="800.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
           <graphic>
-              <ImageView image="$PlusIcon" fitHeight="50.0" fitWidth="50.0" />
+              <ImageView fitHeight="50.0" fitWidth="50.0" />
           </graphic>
         </Button>
         
         <Button layoutX="900.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
           <graphic>
-              <ImageView image="$EditIcon" fitHeight="50.0" fitWidth="50.0" />
+              <ImageView fitHeight="50.0" fitWidth="50.0" />
           </graphic>
         </Button>
         
         <Button layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
           <graphic>
-              <ImageView image="$JumpArrowIcon" fitHeight="50.0" fitWidth="50.0" />
+              <ImageView fitHeight="50.0" fitWidth="50.0" />
           </graphic>
         </Button>
         
         <Button layoutX="1100.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
           <graphic>
-              <ImageView image="$QuestionMarkIcon" fitHeight="50.0" fitWidth="50.0" />
+              <ImageView fitHeight="50.0" fitWidth="50.0" />
           </graphic>
         </Button>
-      <TableView layoutX="37.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0">
+        
+    <TableView layoutX="34.0" layoutY="82.0" prefHeight="28.0" prefWidth="1134.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="37.5" />
+            <TableColumn prefWidth="37.5" />
+            <TableColumn fx:id="FirstRow" prefWidth="265.0" text="Header" />
+            <TableColumn prefWidth="265.0" text="Lookup Name" />
+            <TableColumn prefWidth="265.0" text="Type" />
+            <TableColumn prefWidth="265.0" text="Description" /> 
         </columns>
-      </TableView>
+    </TableView>
+      
+    <TableView layoutX="34.0" layoutY="110.0" prefHeight="28.0" prefWidth="1134.0">
+        <columns>
+            <TableColumn prefWidth="37.5" />
+            <TableColumn prefWidth="37.5" />
+            <TableColumn fx:id="SecondRow" prefWidth="265.0" text="Title" />
+            <TableColumn prefWidth="265.0" text="title" />
+            <TableColumn prefWidth="265.0" text="Text" />
+            <TableColumn prefWidth="265.0" text="Represents Title of the Book" /> 
+        </columns>
+    </TableView>
+      
+    <TableView layoutX="34.0" layoutY="138.0" prefHeight="28.0" prefWidth="1134.0">
+        <columns>
+            <TableColumn prefWidth="37.5" />
+            <TableColumn prefWidth="37.5" />
+            <TableColumn fx:id="ThirdRow" prefWidth="265.0" text="Modified" />
+            <TableColumn prefWidth="265.0" text="last_modified" />
+            <TableColumn prefWidth="265.0" text="Date" />
+            <TableColumn prefWidth="265.0" text="When the book was Modified" /> 
+        </columns>
+    </TableView>
+      
         
         
     </children>
