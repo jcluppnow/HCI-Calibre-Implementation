@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- <?import javafx.scene.image.Image?>-->
+
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Tooltip?>
 
 <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calibre.ColumnScreenController">
     <stylesheets>
@@ -16,82 +19,176 @@
     </stylesheets>
     
     <fx:define>
-            <Image fx:id="PlusIcon" url="@Resources/ColumnIcons/PlusIcon.png" />
+        <Image fx:id="PlusIcon" url="@Resources/ColumnIcons/PlusIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="EditIcon" url="@Resources/ColumnIcons/EditIcon.png" />
+        <Image fx:id="MinusIcon" url="@Resources/ColumnIcons/MinusIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="JumpArrowIcon" url="@Resources/ColumnIcons/JumpArrowIcon.png" />
+        <Image fx:id="EditIcon" url="@Resources/ColumnIcons/EditIcon.png" />
     </fx:define>
+    
     <fx:define>
-            <Image fx:id="QuestionMarkIcon" url="@Resources/ColumnIcons/QuestionMarkIcon.png" />
+        <Image fx:id="JumpArrowIcon" url="@Resources/ColumnIcons/JumpArrowIcon.png" />
     </fx:define>
+    
+    <fx:define>
+        <Image fx:id="QuestionMarkIcon" url="@Resources/ColumnIcons/QuestionMarkIcon.png" />
+    </fx:define>
+    
+    <fx:define>
+        <Image fx:id="UpArrowIcon" url="@Resources/ColumnIcons/UpArrowIcon.png" />
+    </fx:define>
+    
+    <fx:define>
+        <Image fx:id="DownArrowIcon" url="@Resources/ColumnIcons/DownArrowIcon.png" />
+    </fx:define>
+    
     <children>
-       <Label layoutX="31.0" layoutY="15.0" text="Columns - Add or Manage" textFill="WHITE">
+        <Label layoutX="31.0" layoutY="15.0" text="Columns - Add or Manage" textFill="WHITE">
             <font>
                 <Font size="42.0" />
             </font>
         </Label>
         
-        <Button layoutX="800.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
-          <graphic>
-              <ImageView fitHeight="50.0" fitWidth="50.0" />
-          </graphic>
+        <Button layoutX="650.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip text="Add a Row" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$PlusIcon" fitHeight="50.0" fitWidth="50.0" />
+            </graphic>
         </Button>
         
-        <Button layoutX="900.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
-          <graphic>
-              <ImageView fitHeight="50.0" fitWidth="50.0" />
-          </graphic>
+        <Button layoutX="750.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip text="Delete a Row" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$MinusIcon" fitHeight="50.0" fitWidth="50.0" />
+            </graphic>
         </Button>
         
-        <Button layoutX="1000.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
-          <graphic>
-              <ImageView fitHeight="50.0" fitWidth="50.0" />
-          </graphic>
+        <Button layoutX="850.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip text="Edit a Row" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$EditIcon" fitHeight="50.0" fitWidth="50.0" />
+            </graphic>
         </Button>
         
-        <Button layoutX="1100.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: AARRGGBB;">
-          <graphic>
-              <ImageView fitHeight="50.0" fitWidth="50.0" />
-          </graphic>
+        <Button layoutX="950.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip text="Change a Row's Location" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$JumpArrowIcon" fitHeight="50.0" fitWidth="50.0" />
+            </graphic>
         </Button>
         
-    <TableView layoutX="34.0" layoutY="82.0" prefHeight="28.0" prefWidth="1134.0">
-        <columns>
-            <TableColumn prefWidth="37.5" />
-            <TableColumn prefWidth="37.5" />
-            <TableColumn fx:id="FirstRow" prefWidth="265.0" text="Header" />
-            <TableColumn prefWidth="265.0" text="Lookup Name" />
-            <TableColumn prefWidth="265.0" text="Type" />
-            <TableColumn prefWidth="265.0" text="Description" /> 
-        </columns>
-    </TableView>
+        <Button layoutX="1050.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
+            <tooltip>
+                <Tooltip text="Help" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$QuestionMarkIcon" fitHeight="50.0" fitWidth="50.0" />
+            </graphic>
+        </Button>
+        
+        <Separator layoutX="31.0" layoutY="87.0" prefHeight="0.0" prefWidth="1137.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="31.0" layoutY="142.0" prefHeight="0.0" prefWidth="1137.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="31.0" layoutY="197.0" prefHeight="0.0" prefWidth="1137.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="31.0" layoutY="252.0" prefHeight="0.0" prefWidth="1137.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="32.0" layoutY="87.0" orientation="VERTICAL" prefHeight="168.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="1164.0" layoutY="87.0" orientation="VERTICAL" prefHeight="168.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="77.0" layoutY="87.0" orientation="VERTICAL" prefHeight="165.0" style="-fx-background-color: FFFFFF;" />  
+        <Separator layoutX="123.0" layoutY="87.0" orientation="VERTICAL" prefHeight="165.0" style="-fx-background-color: FFFFFF;" />  
+        <Separator layoutX="383.5" layoutY="90.0" orientation="VERTICAL" prefHeight="165.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="644.0" layoutY="90.0" orientation="VERTICAL" prefHeight="165.0" style="-fx-background-color: FFFFFF;" />
+        <Separator layoutX="904.5" layoutY="90.0" orientation="VERTICAL" prefHeight="165.0" style="-fx-background-color: FFFFFF;" />
+        <CheckBox layoutX="48.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" />
+        <CheckBox layoutX="48.0" layoutY="217.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" />
       
-    <TableView layoutX="34.0" layoutY="110.0" prefHeight="28.0" prefWidth="1134.0">
-        <columns>
-            <TableColumn prefWidth="37.5" />
-            <TableColumn prefWidth="37.5" />
-            <TableColumn fx:id="SecondRow" prefWidth="265.0" text="Title" />
-            <TableColumn prefWidth="265.0" text="title" />
-            <TableColumn prefWidth="265.0" text="Text" />
-            <TableColumn prefWidth="265.0" text="Represents Title of the Book" /> 
-        </columns>
-    </TableView>
+        <Label layoutX="176.0" layoutY="99.0" prefHeight="16.0" prefWidth="159.0" text="Header" textFill="WHITE">
+            <font>
+               <Font name="Monospaced Regular" size="34.0" />
+            </font>
+        </Label>
       
-    <TableView layoutX="34.0" layoutY="138.0" prefHeight="28.0" prefWidth="1134.0">
-        <columns>
-            <TableColumn prefWidth="37.5" />
-            <TableColumn prefWidth="37.5" />
-            <TableColumn fx:id="ThirdRow" prefWidth="265.0" text="Modified" />
-            <TableColumn prefWidth="265.0" text="last_modified" />
-            <TableColumn prefWidth="265.0" text="Date" />
-            <TableColumn prefWidth="265.0" text="When the book was Modified" /> 
-        </columns>
-    </TableView>
+        <Label layoutX="405.0" layoutY="99.0" prefHeight="41.0" prefWidth="228.0" text="Lookup Name" textFill="WHITE">
+            <font>
+               <Font name="Monospaced Regular" size="34.0" />
+            </font>
+        </Label>
       
+        <Label layoutX="721.0" layoutY="99.0" prefHeight="16.0" prefWidth="159.0" text="Type" textFill="WHITE">
+            <font>
+               <Font name="Monospaced Regular" size="34.0" />
+            </font>
+        </Label>
         
+        <Label layoutX="927.0" layoutY="99.0" prefHeight="41.0" prefWidth="228.0" text="Description" textFill="WHITE">
+            <font>
+                <Font name="Monospaced Regular" size="34.0" />
+            </font>
+        </Label>
+      
+        <Label layoutX="144.0" layoutY="164.0" prefHeight="16.0" prefWidth="159.0" text="Title" textFill="WHITE" />
+        <Label layoutX="416.0" layoutY="164.0" prefHeight="16.0" prefWidth="159.0" text="title" textFill="WHITE" />
+        <Label layoutX="675.0" layoutY="164.0" prefHeight="16.0" prefWidth="159.0" text="Text" textFill="WHITE" />
+        <Label layoutX="941.0" layoutY="164.0" prefHeight="16.0" prefWidth="174.0" text="Represents Title of Book" textFill="WHITE" />
+
+        <Label layoutX="144.0" layoutY="222.0" prefHeight="16.0" text="Modified" textFill="WHITE" />
+        <Label layoutX="416.0" layoutY="222.0" prefHeight="16.0" prefWidth="159.0" text="last_modified" textFill="WHITE" />
+        <Label layoutX="675.0" layoutY="222.0" prefHeight="16.0" prefWidth="159.0" text="Date" textFill="WHITE" />
+        <Label layoutX="941.0" layoutY="222.0" prefHeight="16.0" prefWidth="221.0" text="When the book was last modified" textFill="WHITE" />
         
+        <Button layoutX="81.0" layoutY="140.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="4.0" onAction="#handleStub" style="-fx-background-color: transparent;" >
+            <tooltip>
+                <Tooltip text="Sets the Position of this Row up one" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$UpArrowIcon" fitHeight="25.0" fitWidth="25.0" smooth="true" preserveRatio="true" />
+            </graphic>
+        </Button>
+        
+        <Button layoutX="81.0" layoutY="167.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="4.0" onAction="#handleStub" style="-fx-background-color: transparent;" >
+            <tooltip>
+                <Tooltip text="Sets the Position of this Row down one" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$DownArrowIcon" fitHeight="25.0" fitWidth="25.0" smooth="true" preserveRatio="true"   />
+            </graphic>
+        </Button>
+        
+        <Button layoutX="81.0" layoutY="196.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="4.0" onAction="#handleStub" style="-fx-background-color: transparent;" >
+            <tooltip>
+                <Tooltip text="Sets the Position of this Row up one" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$UpArrowIcon" fitHeight="25.0" fitWidth="25.0" smooth="true" preserveRatio="true" />
+            </graphic>
+        </Button>
+        
+        <Button layoutX="81.0" layoutY="223.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="4.0" onAction="#handleStub" style="-fx-background-color: transparent;" >
+            <tooltip>
+                <Tooltip text="Sets the Position of this Row down one" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
+                <ImageView image="$DownArrowIcon" fitHeight="25.0" fitWidth="25.0" smooth="true" preserveRatio="true" />
+            </graphic>
+        </Button>
     </children>
 </AnchorPane>
