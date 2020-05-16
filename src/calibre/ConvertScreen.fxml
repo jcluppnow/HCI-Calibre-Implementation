@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Tooltip?>
 
 <AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calibre.ConvertScreenController">
     <stylesheets>
@@ -78,55 +79,91 @@
         </image>
     </ImageView>
 
-    <Button layoutX="28.0" layoutY="40.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: 00000000;" text="Metadata">
+    <Button layoutX="28.0" layoutY="40.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" style="-fx-background-color: transparent;" text="Metadata">
+        <tooltip>
+                <Tooltip text="Access the Metadata or information about a book" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView layoutX="10.0" image="$MetadataIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" />
         </graphic>
     </Button>
     
     <Button layoutX="28.0" layoutY="125.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Look and Feel" >
+        <tooltip>
+            <Tooltip text="Change the look and feel of Calibre" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$LookAndFeelIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
     
-    <Button layoutX="28.0" layoutY="205.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Heuristic \nProcessing" >
+    <Button layoutX="28.0" layoutY="205.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Heuristic Processing" >
+        <tooltip>
+            <Tooltip text="Assist in conversion patterns if something is displaying incorrectly" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$HeuresticProcessingIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
     
     <Button layoutX="28.0" layoutY="285.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Page Setup" >
+        <tooltip>
+            <Tooltip text="Adjust the layout of the page" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$PageSetupIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button> 
     
     <Button layoutX="28.0" layoutY="365.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Structure Detection" >
+        <tooltip>
+            <Tooltip text="Modify the way detection of paragraphs and more displays" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$StructureDetectionIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
     
     <Button layoutX="28.0" layoutY="445.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Table of \nContents" >
+        <tooltip>
+            <Tooltip text="Add to a books table of contents" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$TableofContentsIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button> 
      
     <Button layoutX="28.0" layoutY="525.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Search and \nReplace" >
+        <tooltip>
+            <Tooltip text="Replace words or phrases throughout a book" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$SearchandReplaceIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button>
      
     <Button layoutX="28.0" layoutY="605.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="EPUB Output" >
+        <tooltip>
+            <Tooltip text="Access as an epub" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$EpubIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>
     </Button> 
      
     <Button layoutX="28.0" layoutY="685.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="185.0" text="Debug" >
+        <tooltip>
+            <Tooltip text="Access to debugging settings, mainly for a developer" style="-fx-text-fill: WHITE;" />
+        </tooltip>
+        
         <graphic>
             <ImageView image="$DebugIcon" fitHeight="50.0" fitWidth="50.0" smooth="true" /> 
         </graphic>

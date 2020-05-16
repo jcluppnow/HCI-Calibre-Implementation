@@ -8,9 +8,12 @@ import javafx.event.ActionEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -91,33 +94,14 @@ public class ReadScreenController implements Initializable {
     }
     
     @FXML
-    private void handleSearch(ActionEvent event){
-       
-    }
-    
-    @FXML
-    private void handleBookmark(ActionEvent event){
-       
-    }
-    
-    @FXML
-    private void handleFullScreen(ActionEvent event){
-       
-    }
-    
-    @FXML
-    private void handleResize(ActionEvent event){
-       
-    }
-    
-    @FXML
-    private void handleSettings(ActionEvent event){
-       
-    }
-    
-    @FXML
-    private void handleMore(ActionEvent event){
-       
+    private void handleStub(ActionEvent event)
+    {
+        VBox vBox = new VBox(new Label("                             \n    Button Stub    \n                             "));
+        Scene scene = new Scene(vBox);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
     
     /**

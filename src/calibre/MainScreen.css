@@ -1,0 +1,14 @@
+
+/* 
+    Created on : 14/05/2020, 6:06:21 PM
+    Author     : Jason Luppnow
+*/
+
+.mainFxmlClass {
+    -fx-background-image: url("Resources/MainBackground.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 1400 800;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+

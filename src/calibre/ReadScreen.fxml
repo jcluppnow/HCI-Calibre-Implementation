@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Tooltip?>
 
 <AnchorPane id="AnchorPane" onKeyPressed="#keyPressed" prefHeight="800.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calibre.ReadScreenController">
     <stylesheets>
@@ -41,7 +42,7 @@
         </fx:define>
         
         <fx:define>
-            <Image fx:id="MoreIcon" url="@Resources/ReadIcons/MoreIcon.png" />
+            <Image fx:id="ExitIcon" url="@Resources/ReadIcons/ExitIcon.png" />
         </fx:define>
         
         <fx:define>
@@ -52,42 +53,53 @@
             <Image fx:id="RightArrowIcon" url="@Resources/ReadIcons/RightArrow.png" />
         </fx:define>
         
-        <MenuButton id="Menu-Button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" stylesheets="@readscreen.css">
+        <fx:define>
+            <Image fx:id="MoreIcon" url="@Resources/ReadIcons/MoreIcon.png" />
+        </fx:define>
+        
+        <MenuButton id="Menu-Button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" stylesheets="@readscreen.css">
             <graphic>
                 <ImageView image="$PlusIcon" fitHeight="25.0" fitWidth="25.0" layoutX="0.0" layoutY="0.0" preserveRatio="true" />
             </graphic>
+            
             <items>
-                <MenuItem mnemonicParsing="false" onAction="#handleSearch" style="-fx-background-color: 00000000;">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub" style="-fx-background-color: transparent;">
                     <graphic>
                         <ImageView image="$SearchIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" /> 
                     </graphic>
                 </MenuItem>
 
-                <MenuItem mnemonicParsing="false" onAction="#handleBookmark">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
                     <graphic>
                        <ImageView image="$BookmarkIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
                     </graphic>
                 </MenuItem>
 
-                <MenuItem mnemonicParsing="false" onAction="#handleFullScreen">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
                     <graphic>
                        <ImageView image="$FullScreenIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
                     </graphic>
                 </MenuItem>
 
-                <MenuItem mnemonicParsing="false" onAction="#handleResize">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
                     <graphic>
                        <ImageView image="$ResizeIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
                     </graphic>
                 </MenuItem>
 
-                <MenuItem mnemonicParsing="false" onAction="#handleSettings">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
                     <graphic>
                        <ImageView image="$SettingsIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
                     </graphic>
                 </MenuItem>
 
-                <MenuItem mnemonicParsing="false" onAction="#handleMore">
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
+                    <graphic>
+                       <ImageView image="$ExitIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
+                    </graphic>
+                </MenuItem>
+            
+                <MenuItem mnemonicParsing="false" onAction="#handleStub">
                     <graphic>
                        <ImageView image="$MoreIcon" fitHeight="25.0" fitWidth="25.0" preserveRatio="true" />   
                     </graphic>
@@ -95,16 +107,24 @@
             </items>
         </MenuButton>
       
-        <Button layoutX="600.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" onAction="#handleNextPage">
+        <Button layoutX="675.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: transparent;" onAction="#handleNextPage">
+            <tooltip>
+                <Tooltip text="Go to the next page" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
             <graphic>
                 <ImageView image="$RightArrowIcon" fitHeight="25.0" fitWidth="25.0" />
             </graphic>
         </Button>
         
-        <Button layoutX="14.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: 00000000;" onAction="#handlePreviousPage" >
-          <graphic>
+        <Button layoutX="14.0" layoutY="750.0" mnemonicParsing="false" style="-fx-background-color: transparent;" onAction="#handlePreviousPage" >
+            <tooltip>
+                <Tooltip text="Go to previous page" style="-fx-text-fill: WHITE;" />
+            </tooltip>
+            
+            <graphic>
                 <ImageView image="$LeftArrowIcon" fitHeight="25.0" fitWidth="25.0" style="-fx-border-width: 0;" />
-          </graphic>
+            </graphic>
         </Button>
       
         <Label fx:id="label" layoutX="57.0" layoutY="49.0" text="Label" />

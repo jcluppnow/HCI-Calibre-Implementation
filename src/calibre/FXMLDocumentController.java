@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -111,6 +112,17 @@ public class FXMLDocumentController implements Initializable {
             System.out.println("Problem loading column screen.");
         }
     } 
+    
+    @FXML
+    private void handleStub(ActionEvent event)
+    {
+        VBox vBox = new VBox(new Label("                             \n    Button Stub    \n                             "));
+        Scene scene = new Scene(vBox);
+
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
     
     
     @Override
